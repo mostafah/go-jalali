@@ -44,7 +44,7 @@ year, month, day := Gtoj(time.Now())
 There is also `Strftime` so you can convert to Jalali and format:
 
 ```Go
-jstring := jalali.Strftime(time.Now(), "Printed on %Y/%m/%d") // "Printed on 1392/04/02"
+jstring := jalali.Strftime("Printed on %Y/%m/%d", time.Now()) // "Printed on 1392/04/02"
 ```
 
 [format flags](http://godoc.org/github.com/nbjahan/go-jalali/jalali#Strftime)

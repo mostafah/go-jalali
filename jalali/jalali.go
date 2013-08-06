@@ -93,7 +93,6 @@ func IsLeap(t time.Time) bool {
 //		[%d]   Day of the month (01..31)
 //		[%e]   Day of the month (1..31)
 //		[%j]   Day of the year (1..366)
-//		[%m]   Month of the year (1..12)
 //		[%m]   Month of the year, zero-padded (01..12)
 //		[%_m]  Month of the year, blank-padded ( 1..12)
 //		[%-m]  Month of the year, no-padded (1..12)
@@ -113,8 +112,8 @@ func IsLeap(t time.Time) bool {
 //		[%%]   Literal %'' character
 //
 // Example:
-// 		jalali.Strftime(time.Now(), "Printed on %Y/%m/%d")   #=> "Printed on 1392/04/02"
-func Strftime(t time.Time, format string) string {
+// 		jalali.Strftime("Printed on %Y/%m/%d", time.Now())   #=> "Printed on 1392/04/02"
+func Strftime(format string, t time.Time) string {
 	jyear, jmonth, jday := Gtoj(t)
 	output := format
 	yy := fmt.Sprintf("%d", jyear)[2:]

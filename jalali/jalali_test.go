@@ -46,3 +46,9 @@ func ExampleGtoj() {
 	// Output:
 	// 1392-04-12
 }
+
+func ExampleStrftime() {
+	fmt.Println(Strftime("%Y/%-m/%d", time.Date(2013, 7, 3, 17, 14, 0, 0, time.Local)))
+	// Output:
+	// 1392/4/12
+}

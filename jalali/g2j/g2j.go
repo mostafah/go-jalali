@@ -49,7 +49,7 @@ func main() {
 
 	}
 	if gdate == "" {
-		fmt.Println(jalali.Strftime(time.Now(), "%Y%m%d"))
+		fmt.Println(jalali.Strftime("%Y%m%d", time.Now()))
 		return
 	}
 
